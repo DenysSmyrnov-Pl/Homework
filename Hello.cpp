@@ -7,8 +7,8 @@ using namespace std;
 int main()
 {
     string fileName;
-    fileName = "Input.txt ";
-    cout << "File: ";
+    fileName = "Input.txt";
+    cout << "Enter file name with extension (.txt): ";
     getline(cin, fileName);
 
     if (fileName.empty())
@@ -25,11 +25,14 @@ int main()
     }
 
     string line;
+    string LastLine;
     while (getline(inFile, line))
     {
-        cout << line << endl;
-    }
 
+        cout << line << endl;
+        LastLine = line;
+    }
+    cout << LastLine;
     inFile.close();
     return 0;
 }
