@@ -7,6 +7,7 @@ using namespace std;
 int main()
 {
     string fileName;
+    fileName = "Input.txt ";
     cout << "File: ";
     getline(cin, fileName);
 
