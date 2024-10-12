@@ -21,7 +21,7 @@ public:
 void CoutAllPersons(vector<Person> persons)
 {
     cout << "List of people:" << endl;
-    for (int i = 0; i < persons.size(); i++)
+    for (size_t i = 0; i < persons.size(); i++)
     {
         cout << i + 1 << ") ";
         cout << persons[i].FirstName << " ";
@@ -54,7 +54,7 @@ void changePerson(vector<Person> &persons)
 {
 
     cout << "Enter the index of the person you want to change: ";
-    int i;
+    size_t i;
     cin >> i;
 
     if (i < 1 || i > persons.size()) // check if User wrote correct index line
@@ -77,7 +77,7 @@ void changePerson(vector<Person> &persons)
 // Function to delete an object
 void removePerson(vector<Person> persons)
 {
-    int i;
+    size_t i;
     cout << "Enter the number of the person you want to delete: ";
     cin >> i;
 
