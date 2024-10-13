@@ -17,6 +17,19 @@ public:
         : FirstName(P_FirstName), SecondName(P_SecondName), Score(P_score) {}
 };
 
+// Function to output all objects
+void CoutAllPersons(vector<Person> persons)
+{
+    cout << "List of people:" << endl;
+    for (size_t i = 0; i < persons.size(); i++)
+    {
+        cout << i + 1 << ") ";
+        cout << persons[i].FirstName << " ";
+        cout << persons[i].SecondName << " ";
+        cout << persons[i].Score << endl;
+    }
+}
+
 // Function for changing the object
 void changePerson(vector<Person> persons)
 {
@@ -40,19 +53,6 @@ void changePerson(vector<Person> persons)
 
     cout << "Enter new Score: ";
     cin >> persons[i].Score;
-}
-
-// Function to output all objects
-void CoutAllPersons(vector<Person> persons)
-{
-    cout << "List of people:" << endl;
-    for (size_t i = 0; i < persons.size(); i++)
-    {
-        cout << i + 1 << ") ";
-        cout << persons[i].FirstName << " ";
-        cout << persons[i].SecondName << " ";
-        cout << persons[i].Score << endl;
-    }
 }
 
 // Function to add a new object
