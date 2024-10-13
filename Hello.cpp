@@ -17,6 +17,31 @@ public:
         : FirstName(P_FirstName), SecondName(P_SecondName), Score(P_score) {}
 };
 
+// Function for changing the object
+void changePerson(vector<Person> persons)
+{
+
+    cout << "Enter the index of the person you want to change: ";
+    size_t i; // size_t instead of Ind, becouse if we compare int to vector size it give us a warning
+    cin >> i;
+
+    if (i < 1 || i > persons.size()) // check if User wrote correct index line
+    {
+        cout << "Wrong person number!" << endl;
+    }
+
+    i--; // Decrease by 1, the user enters from 1, but indexing starts from 0
+
+    cout << "Enter new First Name: ";
+    cin >> persons[i].FirstName;
+
+    cout << "Enter new Second Name: ";
+    cin >> persons[i].SecondName;
+
+    cout << "Enter new Score: ";
+    cin >> persons[i].Score;
+}
+
 // Function to output all objects
 void CoutAllPersons(vector<Person> persons)
 {
@@ -47,31 +72,6 @@ void addPerson(vector<Person> persons)
     cin >> Score;
 
     persons.emplace_back(FirstName, SecondName, Score);
-}
-
-// Function for changing the object
-void changePerson(vector<Person> &persons)
-{
-
-    cout << "Enter the index of the person you want to change: ";
-    size_t i;
-    cin >> i;
-
-    if (i < 1 || i > persons.size()) // check if User wrote correct index line
-    {
-        cout << "Wrong person number!" << endl;
-    }
-
-    i--; // Decrease by 1, the user enters from 1, but indexing starts from 0
-
-    cout << "Enter new First Name: ";
-    cin >> persons[i].FirstName;
-
-    cout << "Enter new Second Name: ";
-    cin >> persons[i].SecondName;
-
-    cout << "Enter new Score: ";
-    cin >> persons[i].Score;
 }
 
 // Function to delete an object
